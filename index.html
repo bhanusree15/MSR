@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MSR Car Rentals</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -42,12 +43,16 @@
             gap: 1em;
             justify-items: center;
         }
-        .car-gallery img {
+        .swiper-container {
             width: 100%;
             max-width: 300px;
+        }
+        .swiper-slide img {
+            width: 100%;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+    
         .car-gallery div {
             text-align: center;
             width: 100%;
@@ -112,7 +117,9 @@
             </ul>
             <div class="car-gallery">
                 <div>
-                    <img src="scross.jpeg" alt="scross">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="scross.jpeg" alt="scross">
                     <p>Scross</p>
                 </div>
                 <div>
