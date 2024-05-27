@@ -1,0 +1,30 @@
+<div class="car-gallery">
+    <div>
+        <img src="images/polo-tdi.jpeg" alt="Polo TDI">
+        <p>Polo TDI</p>
+    </div>
+    <div>
+        <img src="images/economy-car.jpg" alt="Economy Car">
+        <p>Economy</p>
+    </div>
+    <div>
+        <img src="images/compact-car.jpg" alt="Compact Car">
+        <p>Compact</p>
+    </div>
+    <div>
+        <img src="images/midsize-car.jpg" alt="Midsize Car">
+        <p>Midsize</p>
+    </div>
+    <div>
+        <img src="images/fullsize-car.jpg" alt="Fullsize Car">
+        <p>Fullsize</p>
+    </div>
+    <div>
+        <img src="images/suv-car.jpg" alt="SUV Car">
+        <p>SUV</p>
+    </div>
+    <div>
+        <img src="images/luxury-car.jpg" alt="Luxury Car">
+        <p>Luxury</p>
+    </div>
+</div>
