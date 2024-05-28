@@ -30,3 +30,5 @@ function moveSlide(n) {
 document.addEventListener("DOMContentLoaded", () => {
     showSlides();
 });
+
+     
