@@ -1,176 +1,71 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSR Car Rentals</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-        }
-        nav a {
-            color: white;
-            padding: 1em;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        .container {
-            padding: 2em;
-        }
-        .services, .booking-form {
-            margin-bottom: 2em;
-        }
-        .car-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1em;
-            justify-items: center;
-        }
-        .car-gallery img {
-            width: 100%;
-            max-width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .car-gallery div {
-            text-align: center;
-            width: 100%;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-            position: relative;
-            width: 100%;
-        }
-        .booking-form label {
-            display: block;
-            margin: 0.5em 0 0.2em;
-        }
-        .booking-form input, .booking-form select {
-            width: 100%;
-            padding: 0.5em;
-            margin-bottom: 1em;
-        }
-        .booking-form button {
-            padding: 1em 2em;
-            background-color: #444;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .booking-form button:hover {
-            background-color: #555;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1em;
-        }
-        .logo img {
-            max-width: 100px;
-            margin-right: 10px;
-        }
-    </style>
+    <title>MSR Car Rental</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>MSR Car Rentals</h1>
-        <p>Car Rental Service</p>
+        <h1>Welcome to MSR Car Rental</h1>
+        <button class="call-button" onclick="window.location.href='tel:+91 9381136457'">Call Us Now</button>
     </header>
-    <nav>
-        <a href="#services">Services</a>
-        <a href="#booking">Book Now</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <div class="container">
-        <section id="services" class="services">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Wide range of vehicles</li>
-                <li>Competitive pricing</li>
-                <li>24/7 customer support</li>
-                
-            </ul>
-            <div class="car-gallery">
-                <div>
-                    <img src=C:\Program Files\Sublime Text\msr\scross.jpeg" alt="scross">
-                    <p>Scross</p>
-                </div>
-                <div>
-                    <img src="C:\Program Files\Sublime Text\msr\baleno.jpeg" alt="Baleno">
-                    <p>Baleno</p>
-                </div>
-                <div>
-                    <img src="C:\Program Files\Sublime Text\msr\polo tdi.jpeg" alt="    POLO TDI">
-                    <p>POLO TDI</p>
-                </div>
-                <div>
-                    <img src="C:\Program Files\Sublime Text\msr\swift.jpeg" alt="SWIFT">
-                    <p>SWIFT</p>
-                </div>
-                <div>
-                    <img src="images/suv-car.jpg" alt="SUV Car">
-                    <p>SUV</p>
-                </div>
-                <div>
-                    <img src="images/luxury-car.jpg" alt="Luxury Car">
-                    <p>Luxury</p>
-                </div>
+
+    <section class="slider">
+        <div class="slider-container">
+            <div class="slide">
+                <img src="scross.jpeg" alt="scross>
+                <div class="caption">Scross</div>
             </div>
-        </section>
-        <section id="booking" class="booking-form">
-            <h2>Book Your Car</h2>
-            <form action="#" method="post">
-                
+            <div class="slide">
+                <img src="SCROSS2.jpeg" alt="scross">
+                <div class="caption">Scross</div>
+            </div>
+            <div class="slide">
+                <img src="baleno.jpeg" alt="baleno">
+                <div class="caption">baleno</div>
+            </div>
+            <div class="slide">
+                <img src="baleno 2" alt="baleno">
+                <div class="caption">baleno</div>
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
 
-                <label for="pickup-date">Pick-Up Date</label>
-                <input type="date" id="pickup-date" name="pickup-date" required>
+    <section class="rental-form">
+        <h2>Book Your Car</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-                <label for="dropoff-date">Drop-Off Date</label>
-                <input type="date" id="dropoff-date" name="dropoff-date" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-                <label for="car-type">Car Type</label>
-                <select id="car-type" name="car-type" required>
-                    <option value="Scross">SCROSS</option>
-                    <option value="BALENO">BALENO</option>
-                    <option value="POLO TDI">POLO TDI</option>
-                    <option value="SWIFT">SWIFT</option>
-                    <option value="suv">SUV</option>
-                    <option value="luxury">Luxury</option>
-                </select>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
 
-                 <button type="submit">Book Now</button>
-                <button type="button" onclick="window.location.href='tel:+91 9381136457'">Call Now</button>
-            </form>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            
-            <p>Phone: +91 9381136457</p>
-            
-        </section>
-    </div>
-    <footer>
-        <p>&copy; MSR Car Rentals. All rights reserved.</p>
-        <p> Made by Bhanu sree
-            
-            <p>
+            <label for="car-model">Car Model:</label>
+            <select id="car-model" name="car-model" required>
+                <option value="SCROSS"></option>
+                <option value="BALENO"></option>
+                <option value="POLO TDI"></option>
+                <option value="SWIFT">/option>
+            </select>
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
