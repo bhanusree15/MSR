@@ -47,6 +47,17 @@ header {
     vertical-align: middle;
 }
 
+.caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -69,4 +80,48 @@ header {
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.rental-form {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rental-form h2 {
+    margin-bottom: 20px;
+}
+
+.rental-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.rental-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.rental-form input, .rental-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.rental-form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+.rental-form input[type="submit"]:hover {
+    background-color: #0056b3;
 }
